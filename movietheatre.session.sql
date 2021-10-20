@@ -1,0 +1,32 @@
+-- CREATE TABLE customer(
+--     customer_id SERIAL PRIMARY KEY,
+--     first_name VARCHAR(100),
+--     last_name VARCHAR(100),
+--     email VARCHAR(150)
+-- );
+-- CREATE TABLE movie(
+--     movie_id SERIAL PRIMARY KEY,
+--     movie_name VARCHAR(50),
+--     ticket_price NUMERIC(4, 2),
+--     release_date DATE
+-- );
+-- CREATE TABLE concession(
+--     concession_id SERIAL PRIMARY KEY,
+--     concession_name VARCHAR(50),
+--     price NUMERIC(4, 2)
+-- );
+-- CREATE TABLE customer_concession(
+--     transaction_id SERIAL PRIMARY KEY,
+--     customer_id INTEGER NOT NULL,
+--     concession_id INTEGER NOT NULL,
+--     FOREIGN KEY(customer_id) REFERENCES customer(customer_id),
+--     FOREIGN KEY(concession_id) REFERENCES concession(concession_id)
+-- );
+-- CREATE TABLE ticket(
+--     ticket_id SERIAL PRIMARY KEY,
+--     purchase_date DATE,
+--     movie_id INTEGER NOT NULL,
+--     customer_id INTEGER NOT NULL,
+--     FOREIGN KEY(movie_id) REFERENCES movie(movie_id),
+--     FOREIGN KEY(customer_id) REFERENCES customer(customer_id)
+-- );
